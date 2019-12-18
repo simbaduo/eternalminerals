@@ -1,0 +1,5 @@
+- [ ] GET - Get All Tektites
+- [ ] GET - Get a single Tektite
+- [ ] POST - Create new Tektite
+- [ ] PUT - Update Tektite
+- [ ] DELETE - Delete a Tektite
