@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using eternalminerals.Models;
@@ -9,9 +10,10 @@ using eternalminerals.Models;
 namespace eternalminerals.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20191219013814_Edit")]
+    partial class Edit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,8 +52,8 @@ namespace eternalminerals.Migrations
                     b.Property<string>("Sku")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("Stocked")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<bool>("Stocked")
+                        .HasColumnType("boolean");
 
                     b.HasKey("Id");
 

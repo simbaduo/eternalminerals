@@ -9,7 +9,7 @@ namespace eternalminerals.Models
   {
 
 
-    public DbSet<Tektite> Tektites { get; set; }
+    public DbSet<Tektite> Tektites { get; set; } //Tektites
     private string ConvertPostConnectionToConnectionString(string connection)
     {
       var _connection = connection.Replace("postgres://", String.Empty);
